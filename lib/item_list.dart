@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:qiita_client/models/item.dart';
 
 import 'item_detail_screen.dart';
+import 'models/item_model.dart';
 
 class ItemListScreen extends StatelessWidget {
   @override
@@ -29,7 +30,7 @@ class ItemListScreen extends StatelessWidget {
               itemCount: itemModel.items.length,
               itemBuilder: (BuildContext context, int index) {
                 final item = itemModel.items[index];
-                return ItemDetailRow(item: item);
+                return ItemListRow(item: item);
               },
             ),
           )
@@ -39,10 +40,10 @@ class ItemListScreen extends StatelessWidget {
   }
 }
 
-class ItemDetailRow extends StatelessWidget {
+class ItemListRow extends StatelessWidget {
   final Item item;
 
-  const ItemDetailRow({Key key, this.item}) : super(key: key);
+  const ItemListRow({Key key, this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

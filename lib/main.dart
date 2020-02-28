@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:qiita_client/item_list.dart';
-import 'package:qiita_client/models/item.dart';
+
+import 'models/item_model.dart';
 
 void main() => runApp(MyApp());
 
